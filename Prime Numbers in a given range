@@ -1,0 +1,20 @@
+# Read input
+start = int(input())
+end = int(input())
+
+found = False  # to check if we get any prime
+
+for num in range(start, end + 1):
+ if num > 1:  # primes are greater than 1
+        is_prime = True
+        for i in range(2, num):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(num)
+            found = True
+
+if not found:
+    print("No primes")
+
